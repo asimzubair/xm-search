@@ -57,7 +57,13 @@
         </div>
     </div>
 
-    @if(isset($dateRangeData))
+    @if(isset($dateRangeData) && empty($dateRangeData))
+    <div class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
+        No data found for your search
+    </div>
+    @endif
+
+    @if(isset($dateRangeData) && !empty($dateRangeData))
     <div class="w-full mt-6">
         <p class="text-xl pb-3 flex items-center">
             <i class="fas fa-list mr-3"></i> Search Results
