@@ -6,7 +6,7 @@
     <div class="flex flex-wrap">
         <div class="w-full lg:w-1/2 my-6 pr-0 lg:pr-2">
             <div class="leading-loose">
-                <form action="{{ route('xm.search') }}" id="search_form" method="post" enctype="multipart/form-data" class="p-10 bg-white rounded shadow-xl">
+                <form action="{{ route('xm.search') }}" id="search_form" method="post" enctype="multipart/form-data" class="p-10 bg-white rounded shadow-xl" autocomplete="off">
                     @csrf
 
                     @if (count($errors) > 0)
