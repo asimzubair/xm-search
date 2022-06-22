@@ -15,7 +15,7 @@ class NasdaqListings
             $cacheKey = 'get_companies_dropdown';
             $dropdown = Cache::remember($cacheKey, env('CACHE_REMEMBER_SECONDS'), function ()  {
                 $companiesList = self::__getCompanies();
-                $dropdown =  self::__makeDropdownData($companiesList);
+                return self::__makeDropdownData($companiesList);
             });
 
             return $dropdown;
