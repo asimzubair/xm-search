@@ -5,7 +5,6 @@ namespace App\Helpers;
 class YHFinance
 {
     const ENDPOINT = "https://yh-finance.p.rapidapi.com/stock/v3/get-historical-data?symbol=";
-    const APIKEY = "575cdeb169msh912ecedf5e0c44ap1a766fjsn7ce7f0d811c7"; #should be in ENV
 
     public static function getHistoricalData( $companySymbol )
     {
@@ -26,7 +25,7 @@ class YHFinance
     {
         $headers = [
             "X-RapidAPI-Host" => "yh-finance.p.rapidapi.com",
-            "X-RapidAPI-Key" => self::APIKEY
+            "X-RapidAPI-Key" => env('RAPIDAPI_KEY')
         ];
 
         $apiResponse = Helper::apiRequest( $method, $url, [], $requestBody, $headers, $format, true);
