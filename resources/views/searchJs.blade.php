@@ -17,7 +17,7 @@
 <!-- Form validation code started -->
 <script>
 
-/*$("#search_form").validate({
+$("#search_form").validate({
     rules: {
         company_symbol: "required",
         start_date: {
@@ -47,7 +47,7 @@ jQuery.validator.addMethod("less_or_equal", function (value, element, params) {
 
 jQuery.validator.addMethod("after_or_equal", function (value, element, params) {
     return new Date(value) >= new Date($(params).val());
-},  'The end date must be a date after or equal to start date.');*/
+},  'The end date must be a date after or equal to start date.');
 
 </script>
 <!-- Form validation code ended -->
