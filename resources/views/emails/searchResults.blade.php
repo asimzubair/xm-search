@@ -1,0 +1,1 @@
+You searched for data between {{ $data['start_date'] }} and {{ $data['end_date'] }}
